@@ -1,0 +1,169 @@
+/*=================================*/
+/* Skinning the Nivo Slider
+/* March 2011
+/* By: Gilbert Pellegrom
+/* http://dev7studios.com
+/*=================================*/
+
+/*====================*/
+/*=== Reset Styles ===*/
+/*====================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	font-family:inherit;
+	vertical-align:baseline;
+}
+body {
+	line-height:1;
+	color:black;
+	background:white;
+}
+table {
+	border-collapse:separate;
+	border-spacing:0;
+}
+caption, th, td {
+	text-align:left;
+	font-weight:normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content:"";
+}
+blockquote, q {
+	quotes:"" "";
+}
+/* HTML5 tags */
+header, section, footer,
+aside, nav, article, figure {
+	display: block;
+}
+
+/*===================*/
+/*=== Main Styles ===*/
+/*===================*/
+body {
+	font:14px/1.6 Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	color:#666;
+	background:#fff url(../images/back.png) repeat;
+}
+
+a, a:visited {
+	color:#2d3536;
+	text-decoration:none;
+	border-bottom:1px dotted #826a4d;
+}
+a:hover, a:active {
+	color:#9e805c;
+	text-decoration:none;
+}
+
+
+/*============================*/
+/*=== Custom Slider Styles ===*/
+/*============================*/
+#slider-wrapper {
+    background:url(../images/slider.png) no-repeat; /* Slider border and shadows */
+    width:668px;
+    height:299px;
+    margin:0 auto;
+    padding-top:17px; /* Push the actual slider into the centre */
+    margin-top:150px;
+    position:relative;
+}
+
+#slider {
+    position:relative;
+    width:630px;
+    height:235px;
+    margin-left:19px; /* Push the actual slider into the centre */
+    background:url(../images/loading.gif) no-repeat 50% 50%;
+}
+#slider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+    width:630px;
+    height:235px;
+}
+#slider a {
+    border:0;
+    display:block;
+}
+
+.nivo-controlNav {
+    background:url(../images/controlnav.png) no-repeat; /* Background for the bullets */
+    width:251px;
+    height:40px;
+    position:absolute;
+    left:200px; /* Manually position in centre. Not perfect :( */
+    bottom:-42px;
+    padding:8px 0 0 82px;
+    z-index:20; /* Make sure it is visible above the slides */
+}
+.nivo-controlNav a {
+    display:block;
+    width:22px;
+    height:22px;
+    background:url(../images/bullets.png) no-repeat;
+    text-indent:-9999px;
+    border:0;
+    margin-right:3px;
+    float:left;
+}
+.nivo-controlNav a.active {
+    background-position:0 -22px; /* Selected bullet */
+}
+
+.nivo-caption {
+    bottom:40%; /* Vertically centre the captions */
+    left:auto;
+    right:0px; /* Put them on the right */
+    width:auto;
+    max-width:630px;
+    overflow:hidden;
+    background:#fff;
+    text-shadow:none;
+    font-family: 'Anton', arial, serif; /* Using a Google Font (not required) */
+    color:#4c4b4b;
+}
+.nivo-caption p {
+    padding:5px 15px;
+}
+.nivo-caption a { 
+    color:#333;
+    font-weight:bold;
+    font-size:27px;
+    text-transform:uppercase;
+}
+
+#featured {
+    background:url(../images/featured.png) no-repeat;
+    width:115px;
+    height:110px;
+    position:absolute;
+    top:-8px; /* Bump up a bit to give the fold effect */
+    left:-8px; /* Bump left a bit to give the fold effect */
+    z-index:20; /* Make sure it is visible above the slides */
+}
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear {
+	clear:both;
+}
